@@ -25,8 +25,7 @@ else if (age < 18 && gender == 'm')
 {
     Console.WriteLine($"Niepełnoletni {genderTranslated}");
 }
-
-else if (name == "Ewa" && age >= 30)
+else if (name == "Ewa" && age >= 30 && gender == 'w')
 {
     Console.WriteLine($"{name}, lat {age}");
 }
