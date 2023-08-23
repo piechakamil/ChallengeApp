@@ -33,3 +33,5 @@ else
 {
     Console.WriteLine("Takiej osoby nie przewidziano");
 }
+
+Console.ReadKey();
