@@ -1,7 +1,7 @@
 ﻿// data
 string name = "Ewa";
 char gender = 'w';  // w - woman, m - man
-int age = 33;
+int age = 12;
 
 // temp var
 string genderTranslated = "";
@@ -17,7 +17,7 @@ else if (gender == 'm')
 }
 
 // core
-if (age > 18 && age < 30)
+if (gender == 'w' && age < 30)
 {
     Console.WriteLine($"{genderTranslated} poniżej 30 lat");
 }
