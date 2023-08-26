@@ -1,35 +1,18 @@
-﻿// data
-string name = "Ewa";
-char gender = 'w';  // w - woman, m - man
-int age = 33;
+﻿
+// ile jakich cyfr występuje w podanej liczbie
+//
 
-// temp var
-string genderTranslated = "";
+int numberToCheck = 4566;
+string numberInString = numberToCheck.ToString();
+char[] letters = numberInString.ToArray();
 
-// decode gender
-if (gender == 'w')
+// declare 0 to 9 
+
+for(int i=0; i<10; i++)
 {
-    genderTranslated = "Kobieta";
-} 
-else if (gender == 'm')
-{
-    genderTranslated = "Mężczyzna";
+
+    Console.WriteLine($"{i} => {i}");
 }
 
-// core
-if (age > 18 && age < 30)
-{
-    Console.WriteLine($"{genderTranslated} poniżej 30 lat");
-}
-else if (age < 18 && gender == 'm')
-{
-    Console.WriteLine($"Niepełnoletni {genderTranslated}");
-}
-else if (name == "Ewa" && age >= 30 && gender == 'w')
-{
-    Console.WriteLine($"{name}, lat {age}");
-}
-else
-{
-    Console.WriteLine("Takiej osoby nie przewidziano");
-}
+char a = '1';
+int b = 1;
