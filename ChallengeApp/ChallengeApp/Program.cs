@@ -5,14 +5,27 @@
 int numberToCheck = 4566;
 string numberInString = numberToCheck.ToString();
 char[] letters = numberInString.ToArray();
+int[] letterCounters = new int[10];
+char[] numbers = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+Console.WriteLine("Sprawdzana liczba: " + numberToCheck);
 
 // declare 0 to 9 
 
-for(int i=0; i<10; i++)
+foreach (char letter in letters)
 {
-
-    Console.WriteLine($"{i} => {i}");
+    for (int i = 0; i < letterCounters.Length; i++)
+    {
+        if (letter == numbers[i])
+        {
+            letterCounters[i]++;
+        }
+    }
 }
 
-char a = '1';
-int b = 1;
+for(int i=0; i< letterCounters.Length; i++)
+{
+
+    Console.WriteLine(numbers[i] + " => " + letterCounters[i]);
+}
+
