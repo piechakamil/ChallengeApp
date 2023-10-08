@@ -1,30 +1,30 @@
-﻿
-// ile jakich cyfr występuje w podanej liczbie
-//
-
-int numberToCheck = 4566;
-string numberInString = numberToCheck.ToString();
-char[] letters = numberInString.ToArray();
-int[] letterCounters = new int[10];
-char[] numbers = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-
-Console.WriteLine("Sprawdzana liczba: " + numberToCheck);
+﻿using ChallengeApp;
 
 
-foreach (char letter in letters)
-{
-    for (int i = 0; i < letterCounters.Length; i++)
-    {
-        if (letter == numbers[i])
-        {
-            letterCounters[i]++;
-        }
-    }
-}
+List<Employee> employeeList = new List<Employee>();
 
-for(int i=0; i< letterCounters.Length; i++)
-{
+Employee employee1 = new Employee("Jan", "Nowak", 40);
+employeeList.Add(employee1);
+employee1.AddScore(5);
+employee1.AddScore(6);
+employee1.AddScore(7);
 
-    Console.WriteLine(numbers[i] + " => " + letterCounters[i]);
-}
+Employee employee2 = new Employee("Janina", "Nowakowska", 41);
+employeeList.Add(employee2);
+employee2.AddScore(1);
+employee2.AddScore(2);
+employee2.AddScore(3);
+
+Employee employee3 = new Employee("Marek", "Markowski", 42);
+employeeList.Add(employee3);
+employee3.AddScore(3);
+employee3.AddScore(4);
+employee3.AddScore(5);
+
+Employee instanceWithHighestScore = employeeList.MaxBy(i => i.Score);
+
+Console.WriteLine($"Najwyższy wynik {instanceWithHighestScore.Score} został uzyskany przez" +
+    $" {instanceWithHighestScore.Name} {instanceWithHighestScore.Surname} (lat: {instanceWithHighestScore.Age})");
+
+
 
